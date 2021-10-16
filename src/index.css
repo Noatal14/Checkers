@@ -1,0 +1,99 @@
+@font-face {
+    font-family: "niceFont";
+    src: url('./font/LemonMilkBold-gx2B3.otf');
+}
+
+body {
+    font-family: 'niceFont';
+}
+
+#checkers-board {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(8, 10vh);
+    grid-template-rows: repeat(8, 10vh);
+    width: fit-content;
+    border: 1px solid black;
+}
+
+.checker {
+    display: grid;
+    place-content: center;
+}
+
+.checker.white {
+    background-color: white;
+}
+
+.checker.black {
+    background-color: gray;
+}
+
+.piece {
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50%;
+}
+
+.piece.white {
+    background-color: white;
+}
+
+.piece.black {
+    background-color: black;
+}
+
+button.piece {
+    border: none;
+}
+
+.header {
+    display: flex;
+    width: fit-content;
+    margin: 7px auto;
+    justify-content: space-between;
+    font-size: 2.5vh;
+}
+
+.header h1 {
+    margin: 0 11px;
+}
+
+.header button {
+    border-radius: 25px;
+    font-size: 3vh;
+    background-color: red;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 4px -1px black;
+    color: white;
+    cursor: pointer;
+}
+
+.header button:enabled:hover {
+    background-color: rgba(255, 0, 0, 0.712);
+}
+
+.header button:disabled {
+    cursor: auto;
+    opacity: 0.4;
+}
+
+.red-message {
+    margin: 4px auto;
+    color: red;
+    text-align: center;
+    font-size: 14px;
+}
+
+#win-message {
+    text-align: center;
+    position: absolute;
+    border-radius: 46px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(185, 185, 24);
+    color: white;
+    padding: 40px;
+    box-shadow: 0px 0px 3px 1px black;
+}
