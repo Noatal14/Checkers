@@ -11,13 +11,13 @@ const initboard = () => {
     for(let j = 0; j < BOARD_COLS; j++) {
       let pieceToPush = null;
 
-      // If black checker
+      // Black checker
       if(i % 2 === j % 2) {
-        // If white piece
+        // White piece
         if(i <= 2) {
           pieceToPush = {pieceColor: 'white', winner: false, row: i, col: j};
         } else {
-          // If black piece
+          // Black piece
           if(i >= 5) {
             pieceToPush = {pieceColor: 'black', winner: false, row: i, col: j};
           }
